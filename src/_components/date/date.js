@@ -22,7 +22,8 @@ class Date extends Component {
   }
 
   getHijriDate() {
-    return moment().add(1,'days').format('iD iMMMM iYYYY');
+  // Adjust the Hijri date by subtracting 2 days to show Ramadan 30 instead of Shawwal 2
+     return moment().subtract(2, 'days').format('iD iMMMM iYYYY');
   }
 
   render() {
